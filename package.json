@@ -1,0 +1,19 @@
+{
+  "name": "coderslab-final",
+  "version": "1.0.0",
+  "description": "final project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkwiecien/CodersLab-Final.git"
+  },
+  "author": "kkwiecien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kkwiecien/CodersLab-Final/issues"
+  },
+  "homepage": "https://github.com/kkwiecien/CodersLab-Final#readme"
+}
