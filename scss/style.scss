@@ -1,0 +1,23 @@
+.container {
+  max-width: 1100px;
+  border: 1px solid black;
+}
+
+#menuBar {
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    li {
+      display: inline;
+      padding-right: 20px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

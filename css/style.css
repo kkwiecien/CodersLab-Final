@@ -1,0 +1,28 @@
+.container {
+  max-width: 1100px;
+  border: 1px solid black;
+}
+
+#menuBar {
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+}
+
+#menuBar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+#menuBar ul li {
+  display: inline;
+  padding-right: 20px;
+}
+
+#menuBar ul li a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
