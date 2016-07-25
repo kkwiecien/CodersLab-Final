@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/kkwiecien/CodersLab-Final/issues"
   },
-  "homepage": "https://github.com/kkwiecien/CodersLab-Final#readme"
+  "homepage": "https://github.com/kkwiecien/CodersLab-Final#readme",
+  "dependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "devDependencies": {}
 }
