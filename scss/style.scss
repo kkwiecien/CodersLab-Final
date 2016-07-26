@@ -1,20 +1,56 @@
 @import '_variables.scss';
+@import '_mixins.scss';
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color: $colorBackground;
 }
 
 .container {
   max-width: 1100px;
   min-height: 100vh;
-  border: 1px solid black;
   margin: 0 auto;
   display: flex;
-  flex-grow: stretch;
+  background-color: white;
+  @include frameShadowRight();
+  border-top: 3px solid $colorBackground;
+}
+
+.columns {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex: 1 1;
+  .three.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1%;
+    padding-left: 1%;
+    background-color: $colorBar;
+    color: white;
+  }
+  .nine.columns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    p {
+      padding-left: 10%;
+    }
+  }
+}
+
+.eleven.columns {
+  display: flex;
+  flex-direction: column;
 }
 
 .one.columns {
-  background-color: $colorBackground;
+  @include frameShadowLeft();
+  background-color: white;
   display: flex;
   justify-content: center;
   padding-top: 1%;
@@ -26,15 +62,18 @@ body {
   width: 100vw;
   position: fixed;
   margin: 0 auto;
-  border: 1px solid black;
   nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around;;
     align-items: center;
+    padding-left: 3%;
+    padding-right: 5%;
     ul {
       list-style: none;
       display: flex;
       justify-content: space-around;
+      margin-bottom: 0;
+      padding-top: 10px;
       li {
         display: inline;
         padding-right: 20px;
@@ -45,13 +84,116 @@ body {
       }
     }
     .flagButton {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 25px;
       background-color: red;
     }
   }
 }
 
 #personalInfo {
-  padding-top: 60px;
+  padding-top: 57px;
+  .photoFrame {
+    max-height: 300px;
+    max-width: 200px;
+    height: 300px;
+    width: 200px;
+    background-color: red;
+  }
+}
+
+#artGallery {
+  .three.columns {
+    flex-direction: column;
+    justify-content: space-around;
+    .galleryButton {
+      background-color: red;
+      width: 50px;
+      height: 50px;
+      align-self: center;
+    }
+  }
+  .nine.columns {
+    display: flex;
+    flex-direction: column;
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      border: 1px solid $colorBackground;
+      .fa-4 {
+        font-size: 2em;
+      }
+      .imageFrame {
+        width: 50px;
+        height: 50px;
+        background-color: $colorBar;
+        overflow: hidden;
+        ul {
+          list-style: none;
+          li {
+            display: inline;
+            div {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#hobbyGallery {
+  .three.columns {
+    flex-direction: column;
+    justify-content: space-around;
+    .hobbyButton {
+      background-color: red;
+      width: 50px;
+      height: 50px;
+      align-self: center;
+    }
+  }
+  .nine.columns {
+    display: flex;
+    flex-direction: column;
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      border: 1px solid $colorBackground;
+      .fa-4 {
+        font-size: 2em;
+      }
+      .imageFrame {
+        width: 50px;
+        height: 50px;
+        background-color: $colorBar;
+        overflow: hidden;
+        position: relative;
+        ul {
+          list-style: none;
+          white-space: nowrap;
+          position: absolute;
+          li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            div {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+#contactInfo {
+  min-height: 35vh;
 }
