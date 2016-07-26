@@ -1,23 +1,57 @@
+@import '_variables.scss';
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 .container {
   max-width: 1100px;
+  min-height: 100vh;
   border: 1px solid black;
+  margin: 0 auto;
+  display: flex;
+  flex-grow: stretch;
+}
+
+.one.columns {
+  background-color: $colorBackground;
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
 }
 
 #menuBar {
+  background-color: $colorBar;
+  z-index: 10;
   width: 100vw;
   position: fixed;
-  display: flex;
-  justify-content: center;
-  ul {
-    list-style: none;
+  margin: 0 auto;
+  border: 1px solid black;
+  nav {
     display: flex;
     justify-content: space-around;
-    li {
-      display: inline;
-      padding-right: 20px;
-      a {
-        text-decoration: none;
+    align-items: center;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      li {
+        display: inline;
+        padding-right: 20px;
+        a {
+          text-decoration: none;
+          color: white;
+        }
       }
     }
+    .flagButton {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+    }
   }
+}
+
+#personalInfo {
+  padding-top: 60px;
 }
