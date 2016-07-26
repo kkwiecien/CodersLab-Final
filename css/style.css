@@ -33,16 +33,26 @@ body {
   padding-left: 1%;
   background-color: #007AC2;
   color: white;
+  border-bottom: 1px dashed #323852;
 }
 
 .row .nine.columns {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  border-bottom: 1px dashed #323852;
 }
 
 .row .nine.columns p {
   padding-left: 10%;
+}
+
+.row:last-of-type .three.columns {
+  border-bottom: none;
+}
+
+.row:last-of-type .nine.columns {
+  border-bottom: none;
 }
 
 .eleven.columns {

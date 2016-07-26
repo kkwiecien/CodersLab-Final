@@ -15,13 +15,38 @@ $(function() {
   }
 
   function galleryScroll() {
-    var $galleryLeftButton = $('#artGallery .fa-caret-square-o-left');
-    var $galleryRightButton = $('#artGallery .fa-caret-square-o-right');
+    var $galleryLeftButton = $('#artGallery .sliderButtonLeft');
+    var $galleryRightButton = $('#artGallery .sliderButtonRight');
+    var index = 0;
     $galleryLeftButton.click(function(event){
-      console.log('a');
+      var sliderLength = $(this).parent().find('div.imageFrame').find('ul').find('li').length;
+      index++;
+      if (index > sliderLength-1) {
+        index = 0;
+        $(this).parent().find('div.imageFrame').find('ul').css({
+          left: '0'
+        });
+      } else {
+        var current_left=$(this).parent().find('div.imageFrame').find('ul').css('left');
+        $(this).parent().find('div.imageFrame').find('ul').css({
+          left: (parseInt(current_left) - 50) + 'px'
+        });
+      }
     });
     $galleryRightButton.click(function(event){
-      console.log('b');
+      var sliderLength = $(this).parent().find('div.imageFrame').find('ul').find('li').length;
+      index--;
+      if (index < 0) {
+        index = sliderLength-1;
+        $(this).parent().find('div.imageFrame').find('ul').css({
+          left: '-' + ((sliderLength-1)*50) + 'px'
+        });
+      } else {
+        var current_left=$(this).parent().find('div.imageFrame').find('ul').css('left');
+        $(this).parent().find('div.imageFrame').find('ul').css({
+          left: (parseInt(current_left) + 50) + 'px'
+        });
+      }
     });
   }
 
@@ -29,28 +54,38 @@ $(function() {
   }
 
   function hobbyScroll() {
-    var $hobbyLeftButton = $('#hobbyGallery .fa-caret-square-o-left');
-    var $hobbyRightButton = $('#hobbyGallery .fa-caret-square-o-right');
+    var $hobbyLeftButton = $('#hobbyGallery .sliderButtonLeft');
+    var $hobbyRightButton = $('#hobbyGallery .sliderButtonRight');
     var index = 0;
     $hobbyLeftButton.click(function(event){
       var sliderLength = $(this).parent().find('div.imageFrame').find('ul').find('li').length;
       index++;
-      if (index > sliderLength-1) {console.log('1');
-        index=0;
+      if (index > sliderLength-1) {
+        index = 0;
         $(this).parent().find('div.imageFrame').find('ul').css({
           left: '0'
         });
-      } else {console.log('2');
+      } else {
         var current_left=$(this).parent().find('div.imageFrame').find('ul').css('left');
-        console.log(current_left);
         $(this).parent().find('div.imageFrame').find('ul').css({
           left: (parseInt(current_left) - 50) + 'px'
         });
       }
-      // $(this).parent().find('div.imageFrame').find('ul').css('left');
     });
     $hobbyRightButton.click(function(event){
-      console.log('y');
+      var sliderLength = $(this).parent().find('div.imageFrame').find('ul').find('li').length;
+      index--;
+      if (index < 0) {
+        index = sliderLength-1;
+        $(this).parent().find('div.imageFrame').find('ul').css({
+          left: '-' + ((sliderLength-1)*50) + 'px'
+        });
+      } else {
+        var current_left=$(this).parent().find('div.imageFrame').find('ul').css('left');
+        $(this).parent().find('div.imageFrame').find('ul').css({
+          left: (parseInt(current_left) + 50) + 'px'
+        });
+      }
     });
   }
 

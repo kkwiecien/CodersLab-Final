@@ -32,14 +32,25 @@ body {
     padding-left: 1%;
     background-color: $colorBar;
     color: white;
+    border-bottom: 1px dashed $colorBackground;
   }
   .nine.columns {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    border-bottom: 1px dashed $colorBackground;
     p {
       padding-left: 10%;
     }
+  }
+}
+
+.row:last-of-type {
+  .three.columns {
+    border-bottom: none;
+  }
+  .nine.columns {
+    border-bottom: none;
   }
 }
 
