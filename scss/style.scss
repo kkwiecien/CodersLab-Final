@@ -118,6 +118,23 @@ body {
     max-height: 180px;
     max-width: 150px;
   }
+  .nine.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+}
+
+#skillsInfo {
+  min-height: 50vh;
+  .nine.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }
 
 button {
@@ -157,6 +174,10 @@ button:focus {
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+      .galleryFrame.artInfo {
+        flex-direction: column;
+        text-align: justify;
       }
       .fa-4 {
         font-size: 2em;
@@ -215,6 +236,8 @@ button:focus {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        text-align: justify;
       }
       .fa-4 {
         font-size: 2em;

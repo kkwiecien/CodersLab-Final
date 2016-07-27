@@ -129,6 +129,25 @@ body {
   max-width: 150px;
 }
 
+#personalInfo .nine.columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+#skillsInfo {
+  min-height: 50vh;
+}
+
+#skillsInfo .nine.columns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 button {
   border: 1px solid white;
   border-radius: 10%;
@@ -173,6 +192,11 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#artGallery .nine.columns section .galleryFrame.artInfo {
+  flex-direction: column;
+  text-align: justify;
 }
 
 #artGallery .nine.columns section .fa-4 {
@@ -238,6 +262,8 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: justify;
 }
 
 #hobbyGallery .nine.columns section .fa-4 {
