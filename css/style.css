@@ -125,11 +125,8 @@ body {
 }
 
 #personalInfo .photoFrame {
-  max-height: 300px;
-  max-width: 200px;
-  height: 300px;
-  width: 200px;
-  background-color: red;
+  max-height: 180px;
+  max-width: 150px;
 }
 
 button {
@@ -183,9 +180,13 @@ button:focus {
 }
 
 #artGallery .nine.columns section .imageFrame {
-  width: 50px;
-  height: 50px;
-  background-color: #007AC2;
+  width: 600px;
+  height: 800px;
+  max-height: 800px;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   position: relative;
 }
@@ -201,8 +202,9 @@ button:focus {
 }
 
 #artGallery .nine.columns section .imageFrame ul li div {
-  width: 50px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #artGallery .nine.columns section.galleryBox {
@@ -243,28 +245,14 @@ button:focus {
 }
 
 #hobbyGallery .nine.columns section .imageFrame {
-  width: 50px;
-  height: 50px;
-  background-color: #007AC2;
+  width: 600px;
+  height: 600px;
+  margin-left: 10px;
   overflow: hidden;
-  position: relative;
-}
-
-#hobbyGallery .nine.columns section .imageFrame ul {
-  list-style: none;
-  white-space: nowrap;
-  position: absolute;
-}
-
-#hobbyGallery .nine.columns section .imageFrame ul li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-#hobbyGallery .nine.columns section .imageFrame ul li div {
-  width: 50px;
-  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #hobbyGallery .nine.columns section.galleryBox {

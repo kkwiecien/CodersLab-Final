@@ -27,8 +27,8 @@ $(function() {
   }
 
   function galleryScroll() {
-    var $galleryLeftButton = $('#artGallery .sliderButtonLeft');
-    var $galleryRightButton = $('#artGallery .sliderButtonRight');
+    var $galleryLeftButton = $('#artGallery').find('.sliderButtonLeft');
+    var $galleryRightButton = $('#artGallery').find('.sliderButtonRight');
     var index = 0;
     $galleryLeftButton.click(function(event){
       var sliderLength = $(this).parent().find('div.imageFrame').find('ul').find('li').length;
@@ -41,7 +41,7 @@ $(function() {
       } else {
         var current_left=$(this).parent().find('div.imageFrame').find('ul').css('left');
         $(this).parent().find('div.imageFrame').find('ul').css({
-          left: (parseInt(current_left) - 50) + 'px'
+          left: (parseInt(current_left) - 600) + 'px'
         });
       }
     });
@@ -51,12 +51,12 @@ $(function() {
       if (index < 0) {
         index = sliderLength-1;
         $(this).parent().find('div.imageFrame').find('ul').css({
-          left: '-' + ((sliderLength-1)*50) + 'px'
+          left: '-' + ((sliderLength-1)*600) + 'px'
         });
       } else {
         var current_left=$(this).parent().find('div.imageFrame').find('ul').css('left');
         $(this).parent().find('div.imageFrame').find('ul').css({
-          left: (parseInt(current_left) + 50) + 'px'
+          left: (parseInt(current_left) + 600) + 'px'
         });
       }
     });
