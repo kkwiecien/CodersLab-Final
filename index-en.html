@@ -15,42 +15,42 @@
 
     <section id="menuBar">
       <nav>
-        <ul>
+        <ul class="navButtons">
           <li><a href="#personalInfo">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-square-o fa-stack-2x"></i>
-              <i class="fa fa-user fa-stack-1x"></i>
-            </span>About Me</a>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-user fa-stack-1x"></i>
+              </span>About Me</a>
           </li>
           <li><a href="#educationInfo">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-square-o fa-stack-2x"></i>
-              <i class="fa fa-graduation-cap fa-stack-1x"></i>
-            </span>Education</a>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-graduation-cap fa-stack-1x"></i>
+              </span>Education</a>
           </li>
           <li><a href="#workExperience">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-square-o fa-stack-2x"></i>
-              <i class="fa fa-briefcase fa-stack-1x"></i>
-            </span>Experience</a>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-briefcase fa-stack-1x"></i>
+              </span>Experience</a>
           </li>
           <li><a href="#skillsInfo">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-square-o fa-stack-2x"></i>
-              <i class="fa fa-trophy fa-stack-1x"></i>
-            </span>Skills</a>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-trophy fa-stack-1x"></i>
+              </span>Skills</a>
           </li>
           <li><a href="#artGallery">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-square-o fa-stack-2x"></i>
-              <i class="fa fa-paint-brush fa-stack-1x"></i>
-            </span>Artwork</a>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-paint-brush fa-stack-1x"></i>
+              </span>Artwork</a>
           </li>
           <li><a href="#hobbyGallery">
-            <span class="fa-stack fa-lg">
-              <i class="fa fa-square-o fa-stack-2x"></i>
-              <i class="fa fa-book fa-stack-1x"></i>
-            </span>Hobbies</a>
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-book fa-stack-1x"></i>
+              </span>Hobbies</a>
           </li>
           <li><a href="#contactInfo">
               <span class="fa-stack fa-lg">
@@ -59,7 +59,7 @@
               </span>Contact</a>
           </li>
         </ul>
-        <div class="flagButton"></div>
+        <a href="#" class="flagButton"><div>PL</div></a>
       </nav>
     </section>
 
@@ -76,7 +76,15 @@
             <div class="photoFrame"></div>
           </div>
           <div class="nine columns">
-            <p>Stuff about education</p>
+            <p>
+              Lorem ipsum dolor sit amet, quas soluta at vix, augue theophrastus an nam. Cum ad ponderum torquatos. Sed at alii ancillae philosophia, vis feugait voluptua reformidans ei. Ne nec iriure elaboraret, sint debet doctus in mei. Sea no esse putant noluisse, vocibus euripidis mei cu, vim alia laoreet id. Sit causae suscipiantur ea, eu sea adversarium liberavisse.
+              <br>
+              <br>
+              Sit alia nominati temporibus ei. Soluta doctus nominavi id pri, no justo salutandi vel. Dictas tritani vim ea, mea ne movet copiosae delicata, option labitur eu vel. Per ad ipsum scripserit eloquentiam, at mel epicuri vulputate, saperet invenire laboramus vix eu. Vim nostrum partiendo at.
+              <br>
+              <br>
+              Deseruisse theophrastus est cu. Pro assum adipisci appellantur at, ius in indoctum explicari, dicit honestatis eam ei. Modo apeirian constituam ei duo. Ad est persius noluisse recteque. Ceteros sapientem te est. Vis ea everti tincidunt, duo error nominavi disputationi ne.
+            </p>
           </div>
         </div>
       </div>
@@ -246,9 +254,15 @@
       <div class="eleven columns">
         <div class="row">
           <div class="three columns">
-            <p> 11.11.2000  <i class="fa fa-long-arrow-right" aria-hidden="true"></i></p>
-            <br>
-            <p> <i class="fa fa-long-arrow-right" aria-hidden="true"></i>  12.11.2000</p>
+            <p>Language Skills:</p>
+          </div>
+          <div class="nine columns">
+            <p>Stuff about education</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="three columns">
+            <p>Computer Literacy Skills:</p>
           </div>
           <div class="nine columns">
             <p>Stuff about education</p>
@@ -267,47 +281,58 @@
       <div class="eleven columns">
         <div class="row">
           <div class="three columns">
-            <div class="galleryButton traditionalArt"></div>
-            <div class="galleryButton fanArt"></div>
-            <div class="galleryButton digitalArt"></div>
+            <button class="galleryButton artDescription" data-type="artDescription">About My Art</button>
+            <button class="galleryButton traditionalArt" data-type="traditionalArt">Traditional Art</button>
+            <button class="galleryButton fanArt" data-type="fanArt">Fan Art</button>
+            <button class="galleryButton digitalArt" data-type="digitalArt">Digital Art</button>
           </div>
           <div class="nine columns">
-            <p>Stuff about education</p>
-            <section class="traditionalArt">
-              <i class="fa fa-caret-square-o-left fa-4 sliderButtonLeft" aria-hidden="true"></i>
-              <div class="imageFrame">
-                <ul>
-                  <li><div>a</div></li>
-                  <li><div>b</div></li>
-                  <li><div>c</div></li>
-                  <li><div>d</div></li>
-                </ul>
+            <section class="artDescription active">
+              <div class="galleryFrame">
+                <p>Stuff about education</p>
               </div>
-              <i class="fa fa-caret-square-o-right fa-4 sliderButtonRight" aria-hidden="true"></i>
             </section>
-            <section class="fanArt">
-              <i class="fa fa-caret-square-o-left fa-4 sliderButtonLeft" aria-hidden="true"></i>
-              <div class="imageFrame">
-                <ul>
-                  <li><div>a</div></li>
-                  <li><div>b</div></li>
-                  <li><div>c</div></li>
-                  <li><div>d</div></li>
-                </ul>
+            <section class="traditionalArt galleryBox">
+              <div class="galleryFrame">
+                <i class="fa fa-caret-square-o-left fa-4 sliderButtonLeft" aria-hidden="true"></i>
+                <div class="imageFrame">
+                  <ul>
+                    <li><div>a</div></li>
+                    <li><div>b</div></li>
+                    <li><div>c</div></li>
+                    <li><div>d</div></li>
+                  </ul>
+                </div>
+                <i class="fa fa-caret-square-o-right fa-4 sliderButtonRight" aria-hidden="true"></i>
               </div>
-              <i class="fa fa-caret-square-o-right fa-4 sliderButtonRight" aria-hidden="true"></i>
             </section>
-            <section class="digitalArt">
-              <i class="fa fa-caret-square-o-left fa-4 sliderButtonLeft" aria-hidden="true"></i>
-              <div class="imageFrame">
-                <ul>
-                  <li><div>a</div></li>
-                  <li><div>b</div></li>
-                  <li><div>c</div></li>
-                  <li><div>d</div></li>
-                </ul>
+            <section class="fanArt galleryBox">
+              <div class="galleryFrame">
+                <i class="fa fa-caret-square-o-left fa-4 sliderButtonLeft" aria-hidden="true"></i>
+                <div class="imageFrame">
+                  <ul>
+                    <li><div>a</div></li>
+                    <li><div>b</div></li>
+                    <li><div>c</div></li>
+                    <li><div>d</div></li>
+                  </ul>
+                </div>
+                <i class="fa fa-caret-square-o-right fa-4 sliderButtonRight" aria-hidden="true"></i>
               </div>
-              <i class="fa fa-caret-square-o-right fa-4 sliderButtonRight" aria-hidden="true"></i>
+            </section>
+            <section class="digitalArt galleryBox">
+              <div class="galleryFrame">
+                <i class="fa fa-caret-square-o-left fa-4 sliderButtonLeft" aria-hidden="true"></i>
+                <div class="imageFrame">
+                  <ul>
+                    <li><div>a</div></li>
+                    <li><div>b</div></li>
+                    <li><div>c</div></li>
+                    <li><div>d</div></li>
+                  </ul>
+                </div>
+                <i class="fa fa-caret-square-o-right fa-4 sliderButtonRight" aria-hidden="true"></i>
+              </div>
             </section>
           </div>
         </div>
@@ -324,47 +349,34 @@
       <div class="eleven columns">
         <div class="row">
           <div class="three columns">
-            <div class="hobbyButton fencingGallery"></div>
-            <div class="hobbyButton modelGallery"></div>
-            <div class="hobbyButton armsAndArmorGallery"></div>
+            <button class="hobbyButton hobbyDescription" data-type="hobbyDescription">About My Hobbies</button>
+            <button class="hobbyButton fencingGallery" data-type="fencingGallery">Fencing</button>
+            <button class="hobbyButton modelGallery" data-type="modelGallery">Modelling</button>
+            <button class="hobbyButton armsAndArmorGallery" data-type="armsAndArmorGallery">Arms &amp; Armour</button>
           </div>
           <div class="nine columns">
-            <p>Stuff about education</p>
-            <section class="fencingGallery">
-              <i class="fa fa-caret-square-o-left fa-4 sliderButtonLeft" aria-hidden="true"></i>
-              <div class="imageFrame">
-                <ul>
-                  <li><div>a</div></li>
-                  <li><div>b</div></li>
-                  <li><div>c</div></li>
-                  <li><div>d</div></li>
-                </ul>
+            <section class="hobbyDescription active">
+              <div class="galleryFrame">
+                <p>Stuff about education</p>
               </div>
-              <i class="fa fa-caret-square-o-right fa-4 sliderButtonRight" aria-hidden="true"></i>
             </section>
-            <section class="modelGallery">
-              <i class="fa fa-caret-square-o-left fa-4 sliderButtonLeft" aria-hidden="true"></i>
-              <div class="imageFrame">
-                <ul>
-                  <li><div>a</div></li>
-                  <li><div>b</div></li>
-                  <li><div>c</div></li>
-                  <li><div>d</div></li>
-                </ul>
+            <section class="fencingGallery galleryBox">
+              <div class="galleryFrame">
+                <div class="imageFrame"></div>
+                <p>Fencing description goes here.</p>
               </div>
-              <i class="fa fa-caret-square-o-right fa-4 sliderButtonRight" aria-hidden="true"></i>
             </section>
-            <section class="armsAndArmorGallery">
-              <i class="fa fa-caret-square-o-left fa-4 sliderButtonLeft" aria-hidden="true"></i>
-              <div class="imageFrame">
-                <ul>
-                  <li><div>a</div></li>
-                  <li><div>b</div></li>
-                  <li><div>c</div></li>
-                  <li><div>d</div></li>
-                </ul>
+            <section class="modelGallery galleryBox">
+              <div class="galleryFrame">
+                <div class="imageFrame"></div>
+                <p>Model description goes here.</p>
               </div>
-              <i class="fa fa-caret-square-o-right fa-4 sliderButtonRight" aria-hidden="true"></i>
+            </section>
+            <section class="armsAndArmorGallery galleryBox">
+              <div class="galleryFrame">
+                <div class="imageFrame"></div>
+                <p>Arsenal description goes here.</p>
+              </div>
             </section>
           </div>
         </div>

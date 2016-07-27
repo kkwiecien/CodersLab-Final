@@ -73,21 +73,25 @@ body {
   width: 100vw;
   position: fixed;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
   nav {
     display: flex;
     justify-content: space-around;;
     align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
     padding-left: 3%;
     padding-right: 5%;
     ul {
       list-style: none;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       margin-bottom: 0;
       padding-top: 10px;
       li {
         display: inline;
-        padding-right: 20px;
+        padding-right: 25px;
         a {
           text-decoration: none;
           color: white;
@@ -96,8 +100,14 @@ body {
     }
     .flagButton {
       width: 40px;
-      height: 25px;
-      background-color: red;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
     }
   }
 }
@@ -113,26 +123,44 @@ body {
   }
 }
 
+button {
+  border: 1px solid white;
+  border-radius: 10%;
+  padding: 0;
+  width: 70%;
+  min-height: 2em;
+  text-align: center;
+}
+button:hover {
+  color: white;
+  background-color: $colorBackground;
+  border-color: white;
+}
+button:focus {
+  color: white;
+  background-color: $colorBackground;
+  border-color: white;
+}
+
 #artGallery {
   .three.columns {
     flex-direction: column;
     justify-content: space-around;
     .galleryButton {
-      background-color: red;
-      width: 50px;
-      height: 50px;
       align-self: center;
     }
   }
   .nine.columns {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      border: 1px solid $colorBackground;
+      width: 100%;
+      .galleryFrame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       .fa-4 {
         font-size: 2em;
       }
@@ -141,16 +169,27 @@ body {
         height: 50px;
         background-color: $colorBar;
         overflow: hidden;
+        position: relative;
         ul {
           list-style: none;
+          white-space: nowrap;
+          position: absolute;
           li {
-            display: inline;
+            display: inline-block;
             div {
               width: 50px;
               height: 50px;
             }
           }
         }
+      }
+    }
+    section.galleryBox {
+      display: none;
+    }
+    section.artDescription {
+      div {
+        justify-content: flex-start;
       }
     }
   }
@@ -161,21 +200,20 @@ body {
     flex-direction: column;
     justify-content: space-around;
     .hobbyButton {
-      background-color: red;
-      width: 50px;
-      height: 50px;
       align-self: center;
     }
   }
   .nine.columns {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      border: 1px solid $colorBackground;
+      width: 100%;
+      .galleryFrame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       .fa-4 {
         font-size: 2em;
       }
@@ -199,6 +237,14 @@ body {
             }
           }
         }
+      }
+    }
+    section.galleryBox {
+      display: none;
+    }
+    section.hobbyDescription {
+      div {
+        justify-content: flex-start;
       }
     }
   }

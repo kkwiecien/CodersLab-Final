@@ -76,12 +76,16 @@ body {
   width: 100vw;
   position: fixed;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 #menuBar nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
   padding-left: 3%;
   padding-right: 5%;
 }
@@ -89,14 +93,14 @@ body {
 #menuBar nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 0;
   padding-top: 10px;
 }
 
 #menuBar nav ul li {
   display: inline;
-  padding-right: 20px;
+  padding-right: 25px;
 }
 
 #menuBar nav ul li a {
@@ -106,8 +110,14 @@ body {
 
 #menuBar nav .flagButton {
   width: 40px;
-  height: 25px;
-  background-color: red;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
 }
 
 #personalInfo {
@@ -122,29 +132,50 @@ body {
   background-color: red;
 }
 
+button {
+  border: 1px solid white;
+  border-radius: 10%;
+  padding: 0;
+  width: 70%;
+  min-height: 2em;
+  text-align: center;
+}
+
+button:hover {
+  color: white;
+  background-color: #323852;
+  border-color: white;
+}
+
+button:focus {
+  color: white;
+  background-color: #323852;
+  border-color: white;
+}
+
 #artGallery .three.columns {
   flex-direction: column;
   justify-content: space-around;
 }
 
 #artGallery .three.columns .galleryButton {
-  background-color: red;
-  width: 50px;
-  height: 50px;
   align-self: center;
 }
 
 #artGallery .nine.columns {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 #artGallery .nine.columns section {
+  width: 100%;
+}
+
+#artGallery .nine.columns section .galleryFrame {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  border: 1px solid #323852;
 }
 
 #artGallery .nine.columns section .fa-4 {
@@ -156,19 +187,30 @@ body {
   height: 50px;
   background-color: #007AC2;
   overflow: hidden;
+  position: relative;
 }
 
 #artGallery .nine.columns section .imageFrame ul {
   list-style: none;
+  white-space: nowrap;
+  position: absolute;
 }
 
 #artGallery .nine.columns section .imageFrame ul li {
-  display: inline;
+  display: inline-block;
 }
 
 #artGallery .nine.columns section .imageFrame ul li div {
   width: 50px;
   height: 50px;
+}
+
+#artGallery .nine.columns section.galleryBox {
+  display: none;
+}
+
+#artGallery .nine.columns section.artDescription div {
+  justify-content: flex-start;
 }
 
 #hobbyGallery .three.columns {
@@ -177,23 +219,23 @@ body {
 }
 
 #hobbyGallery .three.columns .hobbyButton {
-  background-color: red;
-  width: 50px;
-  height: 50px;
   align-self: center;
 }
 
 #hobbyGallery .nine.columns {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 #hobbyGallery .nine.columns section {
+  width: 100%;
+}
+
+#hobbyGallery .nine.columns section .galleryFrame {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  border: 1px solid #323852;
 }
 
 #hobbyGallery .nine.columns section .fa-4 {
@@ -223,6 +265,14 @@ body {
 #hobbyGallery .nine.columns section .imageFrame ul li div {
   width: 50px;
   height: 50px;
+}
+
+#hobbyGallery .nine.columns section.galleryBox {
+  display: none;
+}
+
+#hobbyGallery .nine.columns section.hobbyDescription div {
+  justify-content: flex-start;
 }
 
 #contactInfo {
