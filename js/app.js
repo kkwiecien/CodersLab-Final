@@ -31,33 +31,35 @@ $(function() {
     var $galleryRightButton = $('#artGallery').find('.sliderButtonRight');
     var index = 0;
     $galleryLeftButton.click(function(event){
-      var stepLength = $(this).parent().find('img').width();
-      var sliderLength = $(this).parent().find('div.imageFrame').find('ul').find('li').length;
+      event.preventDefault();
+      var stepLength = $(this).parent().parent().find('img').width();
+      var sliderLength = $(this).parent().parent().find('div.imageFrame').find('ul').find('li').length;
       index++;
       if (index > sliderLength-1) {
         index = 0;
-        $(this).parent().find('div.imageFrame').find('ul').css({
+        $(this).parent().parent().find('div.imageFrame').find('ul').css({
           left: '0'
         });
       } else {
-        var current_left=$(this).parent().find('div.imageFrame').find('ul').css('left');
-        $(this).parent().find('div.imageFrame').find('ul').css({
+        var current_left=$(this).parent().parent().find('div.imageFrame').find('ul').css('left');
+        $(this).parent().parent().find('div.imageFrame').find('ul').css({
           left: (parseInt(current_left) - stepLength) + 'px'
         });
       }
     });
     $galleryRightButton.click(function(event){
-      var stepLength = $(this).parent().find('img').width();
-      var sliderLength = $(this).parent().find('div.imageFrame').find('ul').find('li').length;
+      event.preventDefault();
+      var stepLength = $(this).parent().parent().find('img').width();
+      var sliderLength = $(this).parent().parent().find('div.imageFrame').find('ul').find('li').length;
       index--;
       if (index < 0) {
         index = sliderLength-1;
-        $(this).parent().find('div.imageFrame').find('ul').css({
+        $(this).parent().parent().find('div.imageFrame').find('ul').css({
           left: '-' + ((sliderLength-1)*stepLength) + 'px'
         });
       } else {
-        var current_left=$(this).parent().find('div.imageFrame').find('ul').css('left');
-        $(this).parent().find('div.imageFrame').find('ul').css({
+        var current_left=$(this).parent().parent().find('div.imageFrame').find('ul').css('left');
+        $(this).parent().parent().find('div.imageFrame').find('ul').css({
           left: (parseInt(current_left) + stepLength) + 'px'
         });
       }

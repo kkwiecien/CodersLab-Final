@@ -70,10 +70,18 @@ body {
   padding-top: 1%;
 }
 
+img {
+  width: 70vw;
+  max-width: 600px;
+  height: auto;
+  max-height: 800px;
+}
+
 #menuBar {
   background-color: #007AC2;
   z-index: 10;
   width: 100vw;
+  max-height: 60px;
   position: fixed;
   margin: 0 auto;
   display: flex;
@@ -100,7 +108,7 @@ body {
 
 #menuBar nav ul li {
   display: inline;
-  padding-right: 25px;
+  padding-right: 2vw;
 }
 
 #menuBar nav ul li a {
@@ -108,9 +116,15 @@ body {
   color: white;
 }
 
-#menuBar nav .flagButton {
-  width: 40px;
-  height: 40px;
+#menuBar nav .minButtons {
+  display: none;
+}
+
+#menuBar nav .langButton {
+  max-width: 40px;
+  max-height: 40px;
+  width: 3vw;
+  height: 3vw;
   border-radius: 50%;
   border: 1px solid white;
   display: flex;
@@ -125,6 +139,12 @@ body {
 }
 
 #personalInfo .photoFrame {
+  align-self: center;
+  max-height: 180px;
+  max-width: 150px;
+}
+
+#personalInfo .photoFrame img {
   max-height: 180px;
   max-width: 150px;
 }
@@ -138,7 +158,7 @@ body {
 }
 
 #skillsInfo {
-  min-height: 50vh;
+  min-height: 60vh;
 }
 
 #skillsInfo .nine.columns {
@@ -153,8 +173,10 @@ button {
   border-radius: 10%;
   padding: 0;
   width: 70%;
+  height: auto;
   min-height: 2em;
   text-align: center;
+  white-space: normal;
 }
 
 button:hover {
@@ -199,14 +221,20 @@ button:focus {
   text-align: justify;
 }
 
-#artGallery .nine.columns section .fa-4 {
+#artGallery .nine.columns section a {
+  text-decoration: none;
+  color: black;
+}
+
+#artGallery .nine.columns section a .sliderButtonSize {
   font-size: 2em;
 }
 
 #artGallery .nine.columns section .imageFrame {
-  width: 600px;
-  height: 800px;
+  width: 70vw;
+  height: 80vw;
   max-width: 600px;
+  max-height: 800px;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -246,6 +274,11 @@ button:focus {
   height: 120px;
 }
 
+#artGallery .nine.columns section.digitalArt .imageFrame img {
+  height: 120px;
+  width: 120px;
+}
+
 #hobbyGallery .three.columns {
   flex-direction: column;
   justify-content: space-around;
@@ -273,7 +306,7 @@ button:focus {
   text-align: justify;
 }
 
-#hobbyGallery .nine.columns section .fa-4 {
+#hobbyGallery .nine.columns section .sliderButtonSize {
   font-size: 2em;
 }
 
@@ -298,6 +331,39 @@ button:focus {
 
 #contactInfo {
   min-height: 35vh;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    box-shadow: none;
+  }
+  .one.colums {
+    display: none;
+  }
+  .eleven.columns {
+    width: 100%;
+  }
+  #menuBar nav .bigButtons {
+    display: none;
+  }
+  #menuBar nav .minButtons {
+    font-size: 0.8em;
+    display: flex;
+  }
+  #menuBar nav .langButton {
+    width: 4vw;
+    height: 4vw;
+  }
+  #menuBar nav ul li {
+    padding-right: 1vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
