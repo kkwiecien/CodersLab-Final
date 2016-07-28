@@ -185,17 +185,19 @@ button:focus {
       .imageFrame {
         width: 600px;
         height: 800px;
-        max-height: 800px;
         max-width: 600px;
         display: flex;
-        justify-content: center;
-        align-items: center;
         overflow: hidden;
         position: relative;
         ul {
           list-style: none;
           white-space: nowrap;
           position: absolute;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          top: 0;
+          bottom: 0;
           li {
             display: inline-block;
             div {
@@ -215,6 +217,13 @@ button:focus {
         justify-content: flex-start;
       }
     }
+    section.digitalArt {
+      .imageFrame {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
   }
 }
 
@@ -244,7 +253,7 @@ button:focus {
       }
       .imageFrame {
         width: 600px;
-        height: 600px;
+        max-height: 800px;
         margin-left: 10px;
         overflow: hidden;
         display: flex;
