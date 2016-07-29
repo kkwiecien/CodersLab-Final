@@ -1,0 +1,418 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: $colorBackground;
+}
+
+.container {
+  max-width: 1100px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  background-color: white;
+  @include frameShadowRight();
+  border-top: 3px solid $colorBackground;
+}
+
+.columns {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex: 1 1;
+  height: 100%;
+  .three.columns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1%;
+    padding-left: 1%;
+    background-color: $colorBar;
+    color: white;
+    border-bottom: 1px dashed $colorBackground;
+  }
+  .nine.columns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px dashed $colorBackground;
+    p {
+      padding-left: 10%;
+    }
+  }
+}
+
+.row.firstRow {
+  min-height: 5rem;
+  display: none;
+  flex: 0 0;
+  h4 {
+    align-self: center;
+  }
+}
+
+.row:last-of-type {
+  .three.columns {
+    border-bottom: none;
+  }
+  .nine.columns {
+    border-bottom: none;
+  }
+}
+
+.eleven.columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.one.columns {
+  @include frameShadowLeft();
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
+}
+
+img {
+  width: 45vw;
+  max-width: 600px;
+  height: auto;
+  max-height: 800px;
+}
+
+#menuBar {
+  background-color: $colorBar;
+  z-index: 10;
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  nav {
+    display: flex;
+    justify-content: space-around;;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 3%;
+    padding-right: 5%;
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+      padding-top: 10px;
+      li {
+        display: inline;
+        padding-right: 2vw;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+    .minButtons {
+      display: none;
+    }
+    .langButton {
+      max-width: 50px;
+      max-height: 50px;
+      width: 3vw;
+      height: 3vw;
+      border-radius: 50%;
+      border: 1px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+#personalInfo {
+  padding-top: 57px;
+  .photoFrame {
+    align-self: center;
+    max-height: 180px;
+    max-width: 150px;
+    img {
+      width: 13vw;
+      height: auto;
+      max-height: 180px;
+      max-width: 150px;
+    }
+  }
+  .nine.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+}
+
+#skillsInfo {
+  min-height: 60vh;
+  .nine.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    p {
+      flex: 1 1;
+      text-align: justify;
+      width: 85%;
+    }
+  }
+}
+
+button {
+  border: 1px solid white;
+  border-radius: 10%;
+  padding: 0;
+  width: 70%;
+  height: auto;
+  min-height: 2em;
+  text-align: center;
+  white-space: normal;
+}
+button:hover {
+  color: white;
+  background-color: $colorBackground;
+  border-color: white;
+}
+button:focus {
+  color: white;
+  background-color: $colorBackground;
+  border-color: white;
+}
+
+#artGallery {
+  .three.columns {
+    flex-direction: column;
+    justify-content: space-around;
+    .galleryButton {
+      align-self: center;
+    }
+  }
+  .nine.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    section {
+      width: 100%;
+      .galleryFrame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .galleryFrame.artInfo {
+        flex-direction: column;
+        text-align: justify;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        .sliderButtonSize {
+          font-size: 2em;
+        }
+      }
+      .imageFrame {
+        width: 45vw;
+        height: 80vw;
+        max-width: 600px;
+        max-height: 800px;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        ul {
+          list-style: none;
+          white-space: nowrap;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          li {
+            display: inline-block;
+            div {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+    section.galleryBox {
+      display: none;
+    }
+    section.artDescription {
+      div {
+        justify-content: flex-start;
+      }
+    }
+    section.digitalArt {
+      .imageFrame {
+        width: 120px;
+        height: 120px;
+        img {
+          height: 120px;
+          width: 120px;
+        }
+      }
+    }
+  }
+}
+
+#hobbyGallery {
+  .three.columns {
+    flex-direction: column;
+    justify-content: space-around;
+    .hobbyButton {
+      align-self: center;
+    }
+  }
+  .nine.columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    section {
+      width: 100%;
+      .galleryFrame {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: justify;
+      }
+      .sliderButtonSize {
+        font-size: 2em;
+      }
+      .imageFrame {
+        width: 600px;
+        max-height: 800px;
+        margin-left: 10px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+    section.galleryBox {
+      display: none;
+    }
+    section.hobbyDescription {
+      div {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+}
+
+#contactInfo {
+  min-height: 35vh;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    box-shadow: none;
+  }
+  .row.firstRow {
+    display: flex;
+  }
+  .one.columns {
+    display: none;
+  }
+  .eleven.columns {
+    width: 100%;
+  }
+  h4 {
+    font-size: 2.4rem;
+  }
+  img {
+    width: 60vw;
+  }
+  #menuBar {
+    nav {
+      .bigButtons {
+        display: none;
+      }
+      .minButtons {
+        font-size: 2rem;
+        display: flex;
+      }
+      .langButton {
+        width: 4rem;
+        height: 4rem;
+      }
+      ul {
+        li {
+          padding-right: 1vw;
+        }
+      }
+    }
+  }
+  #artGallery {
+    .nine.columns {
+      section {
+        .imageFrame {
+          width: 60vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    .three.columns {
+      justify-content: flex-start;
+    }
+    .nine.columns {
+      padding-top: 1rem;
+      border-bottom: none;
+      p {
+        padding-right: 5%;
+        padding-left: 5%;
+      }
+    }
+  }
+  img {
+    width: 80vw;
+  }
+  #menuBar {
+    nav {
+      .minButtons {
+        font-size: 1.5rem;
+      }
+      .langButton {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+  #artGallery {
+    .nine.columns {
+      align-items: center;
+      section {
+        .imageFrame {
+          width: 80vw;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "coderslab-final",
+  "description": "final project",
+  "main": "gulpfile.js",
+  "authors": [
+    "kkwiecien"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kkwiecien/CodersLab-Final",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}

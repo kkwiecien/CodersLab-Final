@@ -1,0 +1,11 @@
+@mixin frameShadowRight() {
+  -webkit-box-shadow: inset -10px 0px 5px -5px $colorBackground;
+  -moz-box-shadow: inset -10px 0px 5px -5px $colorBackground;
+  box-shadow: inset -10px 0px 5px -5px $colorBackground;
+}
+
+@mixin frameShadowLeft() {
+  -webkit-box-shadow: inset 10px 0px 5px -5px $colorBackground;
+  -moz-box-shadow: inset 10px 0px 5px -5px $colorBackground;
+  box-shadow: inset 10px 0px 5px -5px $colorBackground;
+}
