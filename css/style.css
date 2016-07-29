@@ -28,7 +28,6 @@ body {
 .row .three.columns {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   padding-top: 1%;
   padding-left: 1%;
@@ -177,8 +176,14 @@ img {
 #skillsInfo .nine.columns {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
+  flex: 1 0;
+  padding-top: 1rem;
+}
+
+#skillsInfo .nine.columns p {
+  flex: 1 1;
 }
 
 button {
