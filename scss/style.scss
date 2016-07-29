@@ -165,8 +165,11 @@ img {
     align-items: flex-start;
     flex: 1 0;
     padding-top: 1rem;
+    padding-bottom: 1rem;
     p {
       flex: 1 1;
+      text-align: justify;
+      width: 85%;
     }
   }
 }
